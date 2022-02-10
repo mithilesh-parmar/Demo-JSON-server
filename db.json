@@ -1,1 +1,79 @@
 
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Demo task",
+      "description": "This is a demo task",
+      "userFacingParams": [
+        {
+          "id": 1,
+          "name": "User facing param 1",
+          "description": "This param will be shown to user for input when they run this task",
+          "type": "Text",
+          "defaultValue": "This is a default value",
+          "isRequired": true
+        }
+      ],
+      "restApiData": {
+        "method": "POST",
+        "apiPath": "https://getpowerplay.in/v1/users",
+        "urlParams": [
+          {
+            "id": 1,
+            "name": "token",
+            "value": "sadfihasiodhaishdapisdhp9qwevipqwgdpisagduasviuasdasjdaisp"
+          }
+        ],
+        "headers": [
+          {
+            "id": 1,
+            "name": "Content-type",
+            "value": "application/json"
+          }
+        ],
+        "apiBodyType": "JSON",
+        "apiBody": ""
+      }
+    },
+    {
+      "id": "5a54d204-6bc2-4a7e-a3de-1c78ff8a79c7",
+      "name": "Demo task 2",
+      "description": "Task to update mobile number of user",
+      "userFacingParams": [
+        {
+          "id": "c153b9f1-e11b-4276-be74-cc04b20f1e5f",
+          "name": "Existing mobile number",
+          "description": "",
+          "defaultValue": "",
+          "type": "Number",
+          "isRequired": "True"
+        },
+        {
+          "id": "ab630b29-95d8-4dbe-a05e-7192c2ea5cc7",
+          "name": "Updated mobile number",
+          "description": "",
+          "defaultValue": "",
+          "type": "Number",
+          "isRequired": "True"
+        }
+      ],
+      "restApiData": {
+        "method": {
+          "isTrusted": false
+        },
+        "apiPath": "https://getpowerplay.in/v1/users",
+        "urlParams": [
+          {
+            "key": "cda1e1d9-10e1-4e09-94b8-05644fe91460",
+            "name": "token",
+            "value": "sahdisahdoaisdboasdgoas"
+          }
+        ],
+        "headers": [],
+        "apiBodyType": "JSON",
+        "apiBody": "{\n\"mobile_number\":{{params.mobile_number}}\n}"
+      }
+    }
+  ]
+}
